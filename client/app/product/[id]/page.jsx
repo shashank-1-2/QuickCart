@@ -21,7 +21,7 @@ const Product = () => {
     const fetchProductData = async () => {
         try {
             setLoading(true);
-            const res = await fetch(`http://localhost:8080/api/products/${id}`);
+            const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/products/${id}`);
             if (res.ok) {
                 const data = await res.json();
                 setProductData(data);

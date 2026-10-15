@@ -21,7 +21,7 @@ export const AppContextProvider = (props) => {
 
     const fetchProductData = async () => {
         try {
-            const res = await fetch("http://localhost:8080/api/products");
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_BACKEND_URL}/api/products`);
             if (res.ok) {
                 const data = await res.json();
                 if (data.length > 0) {
