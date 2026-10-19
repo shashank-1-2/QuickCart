@@ -1,5 +1,7 @@
 package com.quickcart.entity;
 
-public class Role {
-    
+public enum Role {
+    CUSTROMER,
+    ADMIN,
+    SELLER
 }
