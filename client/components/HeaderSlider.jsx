@@ -42,7 +42,7 @@ const HeaderSlider = () => {
   useEffect(() => {
     const fetchBanners = async () => {
       try {
-        const res = await fetch("http://localhost:8080/api/banners");
+        const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/banners`);
         if (res.ok) {
           const data = await res.json();
           // Filter the top carousel banners (id 1 to 3)

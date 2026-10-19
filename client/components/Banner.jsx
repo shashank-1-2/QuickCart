@@ -11,8 +11,8 @@ const Banner = () => {
   useEffect(() => {
     const fetchBanner = async () => {
       try {
-        const res = await fetch("http://localhost:8080/api/banners");
-        if (res.ok) {
+          const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/banners`);
+          if (res.ok) {
           const data = await res.json();
           // Find the gaming promo banner or use the first record
           const promo = data.find((b) => b.id === 4) || data[0];
